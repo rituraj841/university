@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+	<title>University Result - SIGN UP</title>
+</head>
+
+<body>
+
+{{>menu}}
+
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="/">Home</a></li>
+			<li class="active">Registration</li>
+		</ol>
+
+		<div class="row">
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Registration</h1>
+				</header>
+
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h3 class="thin text-center">Register a new account</h3>
+							<p class="text-center text-muted">We hate spams, so don't worrry</p>
+							<hr>
+
+							<form method="post" action="/register-submit">
+								<h5><code>{{errorMessage}}</code></h5>
+
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Username <span class="text-danger">*</span></label>
+										<input type="text"  name="username" maxlength="40" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Password <span class="text-danger">*</span></label>
+										<input type="password" name="password" class="form-control">
+									</div>
+								</div>
+
+
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Email <span class="text-danger">*</span></label>
+										<input type="email"  name="email" maxlength="50"class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Date Of Birth <span class="text-danger">*</span></label>
+										<input type="date" name="dob" class="form-control">
+									</div>
+								</div>
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Gender <span class="text-danger">*</span></label>
+										<input type="text"  name="gender" maxlength="1" style="text-transform:uppercase" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Roll Number <span class="text-danger">*</span></label>
+										<input type="text" name="rollnumber"maxlength="4" class="form-control">
+									</div>
+								</div>
+
+							<hr>
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Father's Name <span class="text-danger"></span></label>
+										<input type="text"  name="fname" maxlength="50" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Mother's Name <span class="text-danger"></span></label>
+										<input type="text" name="mname" maxlength="10" class="form-control">
+									</div>
+								</div>
+
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Student Mobile <span class="text-danger"></span></label>
+										<input type="text"  name="studentmobile" maxlength="15" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Parent Mobile<span class="text-danger"></span></label>
+										<input type="text" name="parentmobile" maxlength="20" style="text-transform:uppercase" class="form-control">
+									</div>
+								</div>
+								<hr>
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Address <span class="text-danger"></span></label>
+										<input type="text"  name="address" maxlength="50" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Flat No. <span class="text-danger"></span></label>
+										<input type="text" name="flat" maxlength="10" class="form-control">
+									</div>
+								</div>
+
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Landmark <span class="text-danger"></span></label>
+										<input type="text"  name="landmark" maxlength="15" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>City<span class="text-danger"></span></label>
+										<input type="text" name="city" maxlength="20" style="text-transform:uppercase" class="form-control">
+									</div>
+								</div>
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Pin Code <span class="text-danger"></span></label>
+										<input type="text"  name="pincode" maxlength="6" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>State <span class="text-danger"></span></label>
+										<input type="text" name="state" maxlength="20" style="text-transform:uppercase" class="form-control">
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-lg-8">
+										<label class="checkbox">
+											<input type="checkbox">
+											I've read the <a href="page_terms.html">Terms and Conditions</a>
+										</label>
+									</div>
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Register</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+
+<footer id="footer" class="top-space">
+
+	{{>footer}}
+	{{>jsIncludes}}
+</body>
+</html>

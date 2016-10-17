@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+	<title>University Result</title>
+</head>
+
+<body>
+
+{{>menu}}
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="/index">Home</a></li>
+			<li class="active">Marks Entry</li>
+		</ol>
+
+
+	<div class="row">
+
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Student Profile</h1>
+				</header>
+      <div class="panel panel-default">
+
+  		<table class="table table-striped">
+  			<thead>
+  			<tr>
+          <th>Roll</th>
+          <th>Student Name</th>
+  				<th>Gender</th>
+  				<th>DOB</th>
+  				<th>Father's Name</th>
+		    	<th>Mother's Name</th>
+  			</tr>
+  			</thead>
+  			<tbody>
+  		  <tr>
+        <td>{{user.rollnumber}}</td>
+      	<td>{{user.username}}</td>
+  		  <td>{{user.gender}}</td>
+  		  <td>{{user.dob}}</td>
+  			<td>{{user.fname}}</td>
+  		  <td>{{user.mname}}</td>
+  		  </tr>
+  		</tbody>
+  	  </table>
+
+  	  <table class="table table-striped">
+  			<thead>
+  			<tr>
+  				<th>Parent Mobile</th>
+          <th>Student Mobile</th>
+          <th>Address</th>
+  				<th>Flat No.</th>
+  				<th>Landmark</th>
+  		    <th>City</th>
+  				<th>State</th>
+  			</tr>
+  			</thead>
+  			<tbody>
+  		  <tr>
+  		    <td>{{user.parentmobile}}</td>
+          <td>{{user.studentmobile}}</td>
+  		  	<td>{{user.address}}</td>
+  		    <td>{{user.flat}}</td>
+  		    <td>{{user.landmark}}</td>
+  		    <td>{{user.city}}</td>
+  			<td>{{user.state}}</td>
+  		  </tr>
+  		</tbody>
+  	  </table>
+      <hr>
+      <article class="col-xs-12 maincontent">
+        <header class="page-header">
+          <h1 class="page-title">Marks Entry </h1>
+        </header>
+
+				<div class="col-md-6 col-md-offset-3 col-sm-18 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h3 class="thin text-center">Admin! Enter Student Marks Here</h3>
+
+							<form method="post" action="/marksEntry">
+								<div class="top-margin">
+                  <label>Student Name <span class="text-danger">*</span></label>
+									<input type="text"  name="nm" required value={{user.username}} readonly class="form-control">
+								</div>
+								<div class="top-margin">
+									<label>Roll Number <span class="text-danger">*</span></label>
+									<input type="number" name="roll" readonly value={{user.rollnumber}} class="form-control">
+								</div>
+
+								<hr>
+                <div class="top-margin">
+                  <label>Physics <span class="text-danger">*</span></label>
+                  <input type="text"  name="physics" class="form-control">
+                </div>
+                <div class="top-margin">
+                  <label>Chemistry <span class="text-danger">*</span></label>
+                  <input type="number" name="chemistry" class="form-control">
+                </div>
+                <div class="top-margin">
+                  <label>Maths <span class="text-danger">*</span></label>
+                  <input type="number" name="maths" class="form-control">
+                </div>
+                <div class="top-margin">
+                  <label>Computer Programming <span class="text-danger">*</span></label>
+                  <input type="number" name="computer" class="form-control">
+                </div>
+
+              </hr>
+								<div class="row">
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+        <!--  -->
+
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+	</div>	  <!-- <footer id="footer" class="top-space"> -->
+
+{{>footer}}
+{{>jsIncludes}}
+{{>jsIncludes}}
+</body>
+</html>

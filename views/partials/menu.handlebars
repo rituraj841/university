@@ -1,0 +1,32 @@
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="/"><img src="/lib/images/logo.png" alt="UNIVERSITY RESULTS"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+				<li><a class="btn">Hi {{LOGGED_USER_NAME}}!</a></li>
+					<li class="active"><a href="/">Home</a></li>
+				{{#if AUTHENTICATED}}
+					<li><a href="/result-form">Scorecard</a></li>
+				{{#if IS_ADMIN}}
+					<li><a href="/student-info-list">Student Info List</a></li>
+					<li><a href="/crosslist">Crosslist</a></li>
+					<li><a href="/quizQuestionEntryForm">Quiz Form</a></li>
+					<li><a href="/adminDashboard">Dashboard</a></li>
+					<li><a href="/register-form">SIGN UP</a></li>
+				{{/if}}
+					<li><a href="/quizExamForm">Take Quiz</a></li>
+					<li><a href="/logout">LOG OUT</a></li>
+				{{else}}
+					<li><a class="btn" href="/login">SIGN IN</a></li>
+					{{/if}}
+			</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->

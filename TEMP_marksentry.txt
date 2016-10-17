@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>
+{{>menu}}    
+<br><br><br>
+<div class="container">
+    <div class="row  col-md-10 col-md-offset-2 panel panel-default">
+	    <h3>Student's  Profile</h3>
+		
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th>Student Name</th>
+				<th>Roll</th>
+				<th>Gender</th>
+				<th>DOB</th>
+				<th>Father's Name</th>
+		    	<th>Mother's Name</th>
+			</tr>
+			</thead>
+			<tbody>
+		  <tr>
+		    <td><input type="text" name="nm" required value={{user.username}} readonly
+		        class="form-control input-sm" placeholder="Name"></td>
+		    <td><input type="number" name="roll" required class="form-control input-sm" placeholder="Roll" readonly value={{user.rollnumber}}></td>
+		    <td>{{user.gender}}</td>
+		    <td>{{user.dob}}</td>	
+			<td>{{user.fname}}</td>
+		    <td>{{user.mname}}</td>	
+		  </tr>
+		</tbody>  
+	  </table> 
+
+	  <table class="table table-striped">
+			<thead>
+			<tr>
+				<th>Parent Mobile</th>
+				<th>Address</th>
+				<th>Flat</th>
+				<th>Student Mobile</th>
+				<th>Landmark</th>
+		    	<th>City</th>
+				<th>State</th>
+			</tr>
+			</thead>
+			<tbody>
+		  <tr>
+		    <td>{{user.parentmobile}}</td>
+		    <td>{{user.address}}</td>
+		    <td>{{user.flat}}</td>
+		    <td>{{user.studentmobile}}</td>	
+			<td>{{user.landmark}}</td>
+		    <td>{{user.city}}</td>
+			<td>{{user.state}}</td>	
+		  </tr>
+		</tbody>  
+	  </table> 		
+	</div>
+			
+	<div class="row  col-md-6 col-md-offset-2 panel panel-default">
+		<div class="well">
+		    <form method="post" action="/marksEntry">
+		      <fieldset>
+		      	<legend>Academics</legend>
+		        
+		        <h3>-:Marks:-</h3><br>
+				Physics:
+		        <input type="text" name="physics" required class="form-control input-sm" placeholder="Physics">
+				Chemistry:
+		        <input type="text" name="chemistry" required class="form-control input-sm" placeholder="Chemistry">
+				Maths:
+		        <input type="text" name="maths" required class="form-control input-sm" placeholder="Maths">
+				Computer Programming:
+		        <input type="text" name="computer" required class="form-control input-sm" placeholder="Computer Programming">
+		        <input type="submit" value="Submit">
+		       </fieldset>
+		    </form>
+	    </div>
+    </div>
+</div>
+
+{{>jsIncludes}}
+</body>
+</html>

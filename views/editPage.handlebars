@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+	<title>University Result - EDIT MARKS</title>
+</head>
+
+<body>
+
+{{>menu}}
+
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="/">Home</a></li>
+			<li class="active">EDIT MARKS</li>
+		</ol>
+
+		<div class="row">
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Edit Marks</h1>
+				</header>
+
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h3 class="thin text-center">Admin! Edit Student Marks Here</h3>
+							<!-- <p class="text-center text-muted">We hate spams, so don't worrry</p> -->
+							<hr>
+
+							<form method="post" action="/crosslist-edit-submit">
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Roll Number <span class="text-danger">*</span></label>
+										<input type="number"  name="roll" readonly value="{{marksRec.roll}}" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Name <span class="text-danger">*</span></label>
+										<input type="text" name="name" readonly value="{{marksRec.xname}}" class="form-control">
+									</div>
+								</div>
+                <hr>
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Physics <span class="text-danger">*</span></label>
+										<input type="number"  name="physics"  value="{{marksRec.physics}}" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Chemistry <span class="text-danger">*</span></label>
+										<input type="number" name="chemistry"  value="{{marksRec.chemistry}}" class="form-control">
+									</div>
+								</div>
+								<div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Maths <span class="text-danger">*</span></label>
+										<input type="number"  name="maths"  value="{{marksRec.maths}}" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Computer <span class="text-danger">*</span></label>
+										<input type="number" name="computer"  value="{{marksRec.computer}}" class="form-control">
+									</div>
+								</div>
+                <hr>
+                <div class="row top-margin">
+									<div class="col-sm-6">
+										<label>Total Marks <span class="text-danger">*</span></label>
+										<input type="number"  name="totalmarks" readonly value="{{marksRec.totalmarks}}" class="form-control">
+									</div>
+									<div class="col-sm-6">
+										<label>Division <span class="text-danger">*</span></label>
+										<input type="text" name="division" readonly value="{{marksRec.division}}"" class="form-control">
+									</div>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-lg-4 text-right">
+										<button class="btn btn-action" type="submit">Sumit Changes</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+
+			</article>
+			<!-- /Article -->
+
+	</div>
+</div>	<!-- /container -->
+
+<footer id="footer" class="top-space">
+
+	{{>footer}}
+	{{>jsIncludes}}
+</body>
+</html>

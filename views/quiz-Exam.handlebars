@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+	<title>University Result</title>
+</head>
+
+<body>
+
+{{>menu}}
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="/index">Home</a></li>
+			<li class="active">Quiz Exam</li>
+		</ol>
+
+
+	<div class="row">
+
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">QUIZ</h1>
+				</header>
+
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h5 <code>{{{errorMessage}}}</code></h5>
+							<h5 <code>YOUR MARKS {{{answerMessage}}}</code></h5>
+							{{#if HAS_QUESTION }}
+              <h3 class="thin text-center">Quiz Questions</h3>
+
+							<form method="post" action="/quizExamForm">
+              <div class="top-margin">
+                  <h4><code>{{LoginMessage}}</code></h4>
+                  <label>Question No.</label>
+									<input type="text" readonly name="Q" value={{QUESTION.qnumber}} > {{QUESTION.qstmnt}}
+								</div>
+								<div class="top-margin">
+									<label>Option 1 </label><br>
+									<input type="radio"  name="answer"  value="1"> {{QUESTION.option1}} </input>
+								</div>
+
+                <div class="top-margin">
+									<label>Option 2 </label><br>
+									<input type="radio"  name="answer"  value="1"> {{QUESTION.option2}} </input>
+								</div>
+
+                <div class="top-margin">
+									<label>Option 3 </label><br>
+									<input type="radio"  name="answer"  value="1"> {{QUESTION.option3}} </input>
+								</div>
+
+                <div class="top-margin">
+									<label>Option 4 </label><br>
+									<input type="radio"  name="answer"  value="1"> {{QUESTION.option4}} </input>
+								</div>
+
+								<hr>
+
+								<div class="row">
+									<div class="col-lg-3 text-right">
+										<button class="btn btn-action" type="submit">Submit Question</button>
+									</div>
+								</div>
+							</form>
+							{{/if}}
+						</div>
+					</div>
+
+				</div>
+
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+
+  <footer id="footer" class="top-space">
+
+{{>footer}}
+{{>jsIncludes}}
+</body>
+</html>

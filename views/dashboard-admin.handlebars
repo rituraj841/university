@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+	<title>University Result</title>
+</head>
+
+<body>
+
+{{>menu}}
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="/index">Home</a></li>
+			<li class="active">Dashboard</li>
+		</ol>
+
+
+	<div class="row">
+
+			<!-- Article main content -->
+			<article class="col-xs-6 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Dashboard</h1>
+				</header>
+      <label>LIST OF HIGHEST SCORERS</label>          
+      <div class="panel panel-default">  
+  		<table class="table table-striped">
+  			<thead>
+  			<tr>
+                <th>Roll</th>
+                <th>Student Name</th>
+                <th>Total Marks</th>
+                <th>Division</th>
+  			</tr>
+  			</thead>
+  			<tbody>
+  		  <tr>
+        <td>{{user.rollnumber}}</td>
+      	<td>{{user.username}}</td>
+        <td>{{user.rollnumber}}</td>
+      	<td>{{user.username}}</td>  
+  		  </tr>
+  		</tbody>
+  	  </table>
+      <hr>
+		</article>
+			<!-- /Article -->
+		</div>
+	</div>	<!-- /container -->
+	</div>	  <!-- <footer id="footer" class="top-space"> -->
+
+{{>footer}}
+{{>jsIncludes}}
+{{>jsIncludes}}
+</body>
+</html>
